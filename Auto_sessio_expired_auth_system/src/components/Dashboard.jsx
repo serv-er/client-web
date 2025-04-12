@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, expireSession } from '../redux/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import ExpenseDashboard from '../pages/ExpenseDashboard';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -119,6 +120,9 @@ const Dashboard = () => {
         >
           Logout
         </button>
+        <button onClick={() => navigate('/expensesDashboard')} style={{ marginTop: '1rem' }}  className="bg-red-500 hover:bg-red-600 transition px-6 py-2 rounded-full text-white font-semibold">
+  Manage Expenses 💼
+</button>
       </motion.div>
 
       {/* Toast on session expiration */}

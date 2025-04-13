@@ -12,6 +12,11 @@ const Dashboard = () => {
   const [timeLeft, setTimeLeft] = useState(0);
   const [showToast, setShowToast] = useState(false);
 
+
+   useEffect(() => {
+      document.title = "Session Dashboard | MyAuth ✨";
+    }, []);
+
   const getRemainingTime = () => {
     const session = JSON.parse(localStorage.getItem('session'));
     if (!session) return 0;

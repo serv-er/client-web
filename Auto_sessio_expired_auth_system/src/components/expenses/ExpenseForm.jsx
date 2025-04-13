@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addExpense,editExpense } from '../../redux/expensesSlice';
 import { v4 as uuidv4 } from 'uuid';
 
 const categories = ['Food', 'Transport', 'Shopping', 'Health', 'Bills', 'Other'];
 
-const ExpenseForm = ({ editingExpense, onClose }) => {
+const ExpenseForm = ({ editingExpense, onClose,onSave }) => {
   const dispatch = useDispatch();
 
   const [form, setForm] = useState({
@@ -44,11 +43,7 @@ const ExpenseForm = ({ editingExpense, onClose }) => {
       date: new Date(date).toISOString()
     };
 
-    if (editingExpense) {
-      dispatch(editExpense(expense));
-    } else {
-      dispatch(addExpense(expense));
-    }
+    onSave(expense);
 
     setForm({ title: '', amount: '', category: '', date: '' });
     onClose();

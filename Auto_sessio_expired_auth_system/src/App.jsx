@@ -6,7 +6,6 @@ import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home';
 import ExpenseDashboard from './pages/ExpenseDashboard';
-import ExpenseForm from './components/expenses/ExpenseForm';
 
 function App() {
   return (

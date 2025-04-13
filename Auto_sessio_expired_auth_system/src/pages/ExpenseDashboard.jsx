@@ -1,5 +1,6 @@
 import React from 'react';
 import ExpenseList from '../components/expenses/ExpenseList';
+import SyncStatus from '../components/expenses/SyncStatus';
 
 
 const ExpenseDashboard = () => {
@@ -8,6 +9,7 @@ const ExpenseDashboard = () => {
       <div className="max-w-3xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">💰 Expense Tracker</h1>
+          <SyncStatus/>
         </div>
         <ExpenseList  />
       </div>

@@ -10,8 +10,8 @@ Thanks for considering contributing to this project — whether you're fixing a 
 1. **Fork** the repository
 2. **Clone** your fork
    ```bash
-   git clone https://github.com/your-username/client-web-type.git
-   cd client-web-type
+   git clone https://github.com/your-username/client-web.git
+   cd client-web
 3. **Create a new branch**
  ```
  git checkout -b feature/amazing-idea
